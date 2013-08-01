@@ -56,7 +56,7 @@ jQuery(function($) {
 
 		// clone it, increment the fields and insert it below, additionally triggering events
 		$row.trigger('beforeclone.ah');
-		var $newrow = $row.clone(true);
+		var $newrow = $row.clone(true).find("input:text").val("").end();
 		$row.trigger('afterclone.ah')
 
 		$newrow
